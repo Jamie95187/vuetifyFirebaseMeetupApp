@@ -9,7 +9,6 @@
         <v-list-item
           v-for="item in menuItems"
           :key="item.title"
-          router
           :to="item.link">
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
@@ -25,14 +24,13 @@
           </v-toolbar-title>
         </router-link>
         <v-app-bar-nav-icon
-          @click.native.stop="sideNav = !sideNav"
+          @click.stop="sideNav = !sideNav"
           ></v-app-bar-nav-icon>
         <v-spacer></v-spacer>
         <v-btn
           text class="white--text"
           v-for="item in menuItems"
           :key="item.title"
-          router
           :to="item.link">
           <v-icon left>
             {{ item.icon }}
