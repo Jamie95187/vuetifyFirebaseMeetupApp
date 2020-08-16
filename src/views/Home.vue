@@ -1,24 +1,15 @@
 <template>
-  <v-app>
-    <Header />
-    <v-content>
-      <v-layout>
-        <v-flex xs1 >
-          <router-view />
-        </v-flex>
-      </v-layout>
-    </v-content>
-  </v-app>
+  <div>
+    <p>The home page</p>
+  </div>
 </template>
 
 <script>
-import Header from '../components/Layout/Header.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    Header
+  export default {
+    name: 'Home',
   }
-
-};
 </script>
+
+<style>
+
+</style>
