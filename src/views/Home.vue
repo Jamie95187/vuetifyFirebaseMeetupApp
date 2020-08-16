@@ -4,10 +4,10 @@
     <v-content>
       <v-layout>
         <v-flex xs1 >
-    <router-view />
-  </v-flex>
-</v-layout>
-</v-content>
+          <router-view />
+        </v-flex>
+      </v-layout>
+    </v-content>
   </v-app>
 </template>
 
