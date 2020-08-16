@@ -1,8 +1,13 @@
 <template>
   <v-app>
     <Header />
-    <v-spacer></v-spacer>
+    <v-content>
+      <v-layout>
+        <v-flex xs1 >
     <router-view />
+  </v-flex>
+</v-layout>
+</v-content>
   </v-app>
 </template>
 
