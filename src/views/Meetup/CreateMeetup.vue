@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>The Crete Meetup Page</p>
+    <p>The Create Meetup Page</p>
   </div>
 </template>
 
