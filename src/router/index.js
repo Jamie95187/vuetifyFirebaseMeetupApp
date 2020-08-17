@@ -21,6 +21,11 @@ Vue.use(VueRouter)
     component: () => import( '../views/Meetup/CreateMeetup.vue')
   },
   {
+    path: '/meetups/:id',
+    name: 'Meetup',
+    component: () => import( '../views/Meetup/Meetup.vue')
+  },
+  {
     path: '/profile',
     name: 'Profile',
     component: () => import( '../views/User/Profile.vue')
