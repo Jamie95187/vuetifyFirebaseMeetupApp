@@ -19,7 +19,7 @@
             v-for="meetup in meetups"
             :src="meetup.imageUrl"
             :key="meetup.id"
-            @click="onLoadMeetup">
+            @click="onLoadMeetup(meetup.id)">
             <div class="title">
               {{ meetup.title }}
             </div>

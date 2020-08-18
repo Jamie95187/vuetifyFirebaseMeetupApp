@@ -23,6 +23,7 @@ Vue.use(VueRouter)
   {
     path: '/meetups/:id',
     name: 'Meetup',
+    props: true,
     component: () => import( '../views/Meetup/Meetup.vue')
   },
   {

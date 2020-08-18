@@ -14,7 +14,7 @@ export default new Vuex.Store({
       {
         imageUrl: 'https://images.theconversation.com/files/349143/original/file-20200723-35-1x7it1t.jpg?ixlib=rb-1.1.0&rect=136%2C157%2C6853%2C4485&q=45&auto=format&w=926&fit=clip',
         id: 'asdasdags12343',
-        itle: "Meet up in Hong Kong",
+        title: "Meet up in Hong Kong",
         date: '2020-08-31'
       }
     ],
