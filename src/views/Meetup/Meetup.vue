@@ -11,7 +11,7 @@
           height="400px"
           ></v-img>
           <v-card-text>
-            <div class="light blue--text">{{ meetup.date }} - {{ meetup.location }}</div>
+            <div class="light blue--text">{{ meetup.date | date }} - {{ meetup.location }}</div>
             <div>{{ meetup.description }}.</div>
           </v-card-text>
           <v-card-actions>
