@@ -90,6 +90,9 @@
     },
     methods: {
       onCreateMeetup() {
+        if (!this.formIsValid) {
+          return
+        }
         const meetupData = {
           title: this.title,
           location: this.location,
@@ -99,6 +102,7 @@
         }
         console.log("Created New Meetup!")
         this.$store.dispatch('createMeetup', meetupData)
+        this.$router.push('/meetups')
       }
     }
   }
