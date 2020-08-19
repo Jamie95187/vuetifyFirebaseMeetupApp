@@ -57,12 +57,30 @@
               </v-textarea>
             </v-flex>
           </v-layout>
+          <v-layout class="mb-3">
+            <v-flex class="primary--text" xs12 sm6 offset-sm3>
+              <h3>Chooose a Date &amp; Time</h3>
+            </v-flex>
+          </v-layout>
+          <v-layout class="mb-3">
+            <v-flex xs12 sm6 offset-sm3>
+              <v-date-picker v-model="date"></v-date-picker>
+              {{ date }}
+            </v-flex>
+          </v-layout>
+          <v-layout>
+            <v-flex xs12 sm6 offset-sm3>
+              <v-time-picker v-model="time"></v-time-picker>
+              {{ time }}
+            </v-flex>
+          </v-layout>
           <v-layout row>
             <v-flex xs12 sm6 offset-sm3>
               <v-btn
                 class="primary"
                 :disabled="!formIsValid"
                 type="submit">Create Meetup</v-btn>
+                {{ submittableDateTime }}
             </v-flex>
           </v-layout>
         </form>
@@ -78,7 +96,9 @@
       title: '',
       location: '',
       imageUrl: '',
-      description: ''
+      description: '',
+      date: new Date().json,
+      time: new Date()
     }),
     computed: {
       formIsValid () {
@@ -86,6 +106,20 @@
         this.location !== '' &&
         this.imageUrl !== '' &&
         this.description !== ''
+      },
+      submittableDateTime () {
+        const date = new Date(this.date)
+        if (typeof this.time === 'string') {
+          const hours = this.time.match(/^(\d+)/)[1]
+          const minutes = this.time.match(/:(\d+)/)[1]
+          date.setHours(hours)
+          date.setMinutes(minutes)
+        } else {
+          date.setHours(this.time.getHours())
+          date.setMinutes(this.time.getMinutes())
+        }
+        console.log(date)
+        return date
       }
     },
     methods: {
@@ -100,7 +134,6 @@
           description: this.description,
           date: new Date()
         }
-        console.log("Created New Meetup!")
         this.$store.dispatch('createMeetup', meetupData)
         this.$router.push('/meetups')
       }
