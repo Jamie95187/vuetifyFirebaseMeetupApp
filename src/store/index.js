@@ -9,13 +9,17 @@ export default new Vuex.Store({
       { imageUrl: 'https://cdn.vox-cdn.com/thumbor/_Azul93vJ6T8m1jEoxgCNl-x1Dw=/0x0:6000x4000/920x613/filters:focal(2520x1520:3480x2480):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66907018/shutterstock_1701722863.0.jpg',
         id: 'asdasdags12312',
         title: "Meet up in New York",
-        date: '2020-08-29'
+        date: '2020-08-29',
+        location: 'New York',
+        description: 'New York Food'
       },
       {
         imageUrl: 'https://images.theconversation.com/files/349143/original/file-20200723-35-1x7it1t.jpg?ixlib=rb-1.1.0&rect=136%2C157%2C6853%2C4485&q=45&auto=format&w=926&fit=clip',
         id: 'asdasdags12343',
         title: "Meet up in Hong Kong",
-        date: '2020-08-31'
+        date: '2020-08-31',
+        location: 'Hong Kong',
+        description: 'Hong Kong Food'
       }
     ],
     user: {
