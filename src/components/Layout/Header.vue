@@ -56,7 +56,7 @@
           { icon: 'lock_open', title: 'Sign in', link: '/signin'}
         ]
         if (this.userIsAuthenticated) {
-          menuItems: [
+          menuItems = [
             { icon: 'supervisor_account', title: 'View Meetups', link: '/meetups'},
             { icon: 'room', title: 'Organize Meetup', link: '/meetup/new'},
             { icon: 'person', title: 'Profile', link: '/profile'}
