@@ -69,7 +69,6 @@
     },
     methods: {
       onSignup () {
-        // Vuex
         console.log({ email:this.email, password: this.password, confirmPassword: this.confirmPassword })
       }
     }
