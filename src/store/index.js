@@ -30,6 +30,7 @@ export default new Vuex.Store({
       state.meetups.push(payload)
     },
     setUser (state, payload) {
+      console.log(payload.id)
       state.user = payload
     }
   },
@@ -67,8 +68,9 @@ export default new Vuex.Store({
       firebase.auth().signInWithEmailAndPassword(payload.email, payload.password)
         .then(
           user => {
+            // console.log(user.user.uid)
             const newUser = {
-              id: user.uid,
+              id: user.user.uid,
               registerdMeetups: []
             }
             commit('setUser', newUser)

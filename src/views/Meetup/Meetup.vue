@@ -29,6 +29,7 @@
     props: ['id'],
     computed: {
       meetup () {
+        console.log(this.$route.path)
         return this.$store.getters.loadedMeetup(this.id)
       }
     }
